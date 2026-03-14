@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FiLLi Cafe — Brand Momentum Phase | Meta Ads Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a0a14;
+  --navy-light: #12121f;
+  --navy-mid: #1a1a2e;
+  --gold: #d4a853;
+  --gold-dim: #b8923f;
+  --gold-glow: rgba(212, 168, 83, 0.15);
+  --white: #f0ece4;
+  --white-dim: #a8a4a0;
+  --gray: #6a6a7a;
+  --red: #e74c3c;
+  --red-dim: rgba(231, 76, 60, 0.15);
+  --green: #2ecc71;
+  --green-dim: rgba(46, 204, 113, 0.15);
+  --blue: #3498db;
+  --blue-dim: rgba(52, 152, 219, 0.15);
+  --purple: #9b59b6;
+  --purple-dim: rgba(155, 89, 182, 0.15);
+  --orange: #e67e22;
+  --orange-dim: rgba(230, 126, 34, 0.15);
+  --yellow: #f1c40f;
+  --yellow-dim: rgba(241, 196, 15, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Noise grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ======= HERO ======= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(212,168,83,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.2s forwards;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s forwards;
+}
+
+.hero-title em {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--gray);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.8s forwards;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 1s 1.1s forwards;
+}
+
+.hero-meta-item {
+  text-align: center;
+}
+
+.hero-meta-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+}
+
+.hero-meta-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gray);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeUp 1s 1.5s forwards;
+}
+
+.hero-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  margin: 0.8rem auto 0;
+  animation: pulse 2s infinite;
+}
+
+/* ======= SECTIONS ======= */
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+  margin: 0 auto;
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.section-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 900;
+  color: rgba(212, 168, 83, 0.06);
+  position: absolute;
+  top: -2.5rem;
+  left: -1rem;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  position: relative;
+}
+
+/* ======= REVEAL ANIMATION ======= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ======= TABLES ======= */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.92rem;
+}
+
+.data-table thead th {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: left;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.25);
+  font-weight: 400;
+}
+
+.data-table tbody td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--white-dim);
+  vertical-align: top;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.015);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(212, 168, 83, 0.04);
+}
+
+.data-table td:first-child {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.data-table .val-gold { color: var(--gold); font-weight: 500; }
+.data-table .val-red { color: var(--red); font-weight: 500; }
+.data-table .val-green { color: var(--green); font-weight: 500; }
+
+/* ======= LEARNING CARDS ======= */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.2rem;
+  margin: 2.5rem 0;
+}
+
+.learning-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 1.5rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.learning-card:hover {
+  border-color: rgba(212, 168, 83, 0.2);
+  transform: translateY(-2px);
+}
+
+.learning-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -0.3rem;
+  right: 0.8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(212, 168, 83, 0.06);
+  line-height: 1;
+}
+
+.learning-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.learning-card p {
+  font-size: 0.88rem;
+  color: var(--white-dim);
+  line-height: 1.6;
+}
+
+/* ======= PHASE BLOCK ======= */
+.phase-block {
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.phase-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  border-radius: 4px 0 0 4px;
+}
+
+.phase-block h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.phase-block p, .phase-block li {
+  color: var(--white-dim);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.phase-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.phase-block ul li::before {
+  content: '→';
+  color: var(--gold);
+  margin-right: 0.8rem;
+  font-weight: 700;
+}
+
+/* ======= CAMPAIGN CARDS ======= */
+.campaign-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 2.2rem 2.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.campaign-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.campaign-card.green { border-left-color: var(--green); }
+.campaign-card.blue { border-left-color: var(--blue); }
+.campaign-card.purple { border-left-color: var(--purple); }
+.campaign-card.orange { border-left-color: var(--orange); }
+.campaign-card.red-accent { border-left-color: var(--red); }
+
+.campaign-card .campaign-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.campaign-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.campaign-card.green h3 { color: var(--green); }
+.campaign-card.blue h3 { color: var(--blue); }
+.campaign-card.purple h3 { color: var(--purple); }
+.campaign-card.orange h3 { color: var(--orange); }
+.campaign-card.red-accent h3 { color: var(--red); }
+
+.campaign-detail {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.3rem 1.5rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.3rem;
+}
+
+.campaign-detail dt {
+  color: var(--gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding-top: 0.2rem;
+}
+
+.campaign-detail dd {
+  color: var(--white-dim);
+  line-height: 1.6;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.campaign-detail dd:last-child {
+  border-bottom: none;
+}
+
+.kill-rule {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--red-dim);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kill-rule::before {
+  content: '⚠';
+  font-size: 1rem;
+}
+
+/* ======= KPI TABLE ======= */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.kpi-table thead th {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.25);
+  text-align: left;
+  font-weight: 400;
+}
+
+.kpi-table thead th:nth-child(1) { color: var(--white); }
+.kpi-table thead th:nth-child(2) { color: var(--green); }
+.kpi-table thead th:nth-child(3) { color: var(--red); }
+
+.kpi-table tbody td {
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.9rem;
+}
+
+.kpi-table tbody tr:hover {
+  background: rgba(212, 168, 83, 0.03);
+}
+
+.kpi-table td:first-child {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.kpi-table .bench {
+  color: var(--green);
+  background: var(--green-dim);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.kpi-table .flag {
+  color: var(--red);
+  background: var(--red-dim);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* ======= CREATIVE PILLARS ======= */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pillar-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.pillar-card:hover {
+  border-color: rgba(212, 168, 83, 0.2);
+}
+
+.pillar-card .pillar-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.pillar-card p {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ======= BUDGET BAR ======= */
+.budget-bar-container {
+  margin: 2rem 0;
+}
+
+.budget-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.budget-label {
+  width: 180px;
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.budget-bar-track {
+  flex: 1;
+  height: 28px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.budget-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 0;
+}
+
+.budget-bar-fill.animated { /* set by JS */ }
+
+.budget-bar-fill.green-fill { background: var(--green); }
+.budget-bar-fill.blue-fill { background: var(--blue); }
+.budget-bar-fill.purple-fill { background: var(--purple); }
+.budget-bar-fill.orange-fill { background: var(--orange); }
+.budget-bar-fill.red-fill { background: var(--red); }
+
+.budget-pct {
+  width: 50px;
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ======= TIMELINE ======= */
+.timeline {
+  position: relative;
+  margin: 2.5rem 0 2.5rem 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-dim), transparent);
+}
+
+.timeline-block {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-block::before {
+  content: '';
+  position: absolute;
+  left: -2.65rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--navy);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.timeline-week {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.timeline-tasks {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-tasks li {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-tasks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid var(--gray);
+  border-radius: 2px;
+}
+
+/* ======= RULES GRID ======= */
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.rules-block {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.rules-block.kill {
+  background: var(--red-dim);
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.rules-block.scale {
+  background: var(--green-dim);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.rules-block h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.rules-block.kill h4 { color: var(--red); }
+.rules-block.scale h4 { color: var(--green); }
+
+.rules-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rules-block ul li {
+  font-size: 0.82rem;
+  color: var(--white-dim);
+  padding: 0.35rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.rules-block.kill ul li::before { content: '✕'; position: absolute; left: 0; color: var(--red); font-weight: 700; font-size: 0.7rem; }
+.rules-block.scale ul li::before { content: '↑'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+
+/* ======= AUDIENCE TABLE ======= */
+.audience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.85rem;
+}
+
+.audience-table thead th {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: left;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.2);
+  font-weight: 400;
+}
+
+.audience-table tbody td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  color: var(--white-dim);
+}
+
+.audience-table tbody td:first-child { color: var(--white); font-weight: 500; }
+.audience-table tbody td:nth-child(3) { color: var(--gold); font-weight: 500; }
+
+.audience-table tbody tr:hover { background: rgba(212,168,83,0.03); }
+
+/* ======= SEGMENT LAYERS ======= */
+.segment-layers {
+  display: flex;
+  gap: 0.8rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.segment {
+  flex: 1;
+  min-width: 180px;
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.segment.cold { background: rgba(100,100,140,0.15); border: 1px solid rgba(100,100,140,0.2); }
+.segment.warm { background: var(--yellow-dim); border: 1px solid rgba(241,196,15,0.2); }
+.segment.hot { background: var(--orange-dim); border: 1px solid rgba(230,126,34,0.2); }
+.segment.customer { background: var(--green-dim); border: 1px solid rgba(46,204,113,0.2); }
+
+.segment h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.segment.cold h5 { color: var(--gray); }
+.segment.warm h5 { color: var(--yellow); }
+.segment.hot h5 { color: var(--orange); }
+.segment.customer h5 { color: var(--green); }
+
+.segment p {
+  font-size: 0.78rem;
+  color: var(--white-dim);
+  line-height: 1.5;
+}
+
+/* ======= SUMMARY BLOCK ======= */
+.summary-block {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.summary-block::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 500px; height: 500px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(212,168,83,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.summary-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.summary-quote em {
+  color: var(--gold);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+
+.summary-stat {
+  text-align: center;
+}
+
+.summary-stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.summary-stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 0.2rem;
+}
+
+/* ======= FOOTER ======= */
+.doc-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray);
+  font-size: 0.78rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ======= BACK TO TOP ======= */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(212,168,83,0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ======= INLINE TEXT ======= */
+.text-gold { color: var(--gold); }
+.text-red { color: var(--red); }
+.text-green { color: var(--green); }
+.text-dim { color: var(--gray); }
+.text-white { color: var(--white); }
+
+.prose {
+  font-size: 0.95rem;
+  color: var(--white-dim);
+  line-height: 1.8;
+  margin: 1rem 0;
+}
+
+.prose strong { color: var(--white); font-weight: 500; }
+
+.prose-callout {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gold);
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--gold);
+  line-height: 1.6;
+}
+
+h3.sub-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin: 2.5rem 0 1rem;
+  font-weight: 700;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.bullet-list li {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+.bullet-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ======= ANIMATIONS ======= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .container { padding: 0 1.2rem; }
+  .section { padding: 4rem 0; }
+  .learning-grid { grid-template-columns: 1fr; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .campaign-detail { grid-template-columns: 100px 1fr; gap: 0.2rem 1rem; }
+  .campaign-card { padding: 1.5rem; }
+  .budget-label { width: 120px; font-size: 0.75rem; }
+  .hero-meta { gap: 1.5rem; }
+  .segment-layers { flex-direction: column; }
+  .pillar-grid { grid-template-columns: 1fr; }
+  .summary-stats { gap: 1.5rem; }
+  .data-table { font-size: 0.82rem; }
+  .data-table thead th, .data-table tbody td { padding: 0.6rem 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  .section-number { font-size: 4rem; }
+  .budget-row { flex-wrap: wrap; }
+  .budget-label { width: 100%; text-align: left; }
+  .hero-meta { flex-direction: column; gap: 1rem; }
+}
+
+/* ======= PRINT ======= */
+@media print {
+  body { background: white; color: #1a1a1a; }
+  body::before { display: none; }
+  .back-to-top { display: none; }
+  .hero { min-height: auto; padding: 2rem 0; }
+  .hero::before { display: none; }
+  .hero-brand, .hero-title, .hero-sub, .hero-meta, .hero-scroll { opacity: 1; animation: none; color: #1a1a1a; }
+  .hero-brand, .section-label { color: #b8923f; }
+  .hero-title em { color: #b8923f; }
+  .section { padding: 2rem 0; break-inside: avoid; }
+  .section-number { color: rgba(180,150,80,0.1); }
+  .section-title { color: #1a1a1a; }
+  .learning-card, .campaign-card, .phase-block { background: #f8f8f8; border-color: #ddd; }
+  .learning-card h4, .campaign-card h3 { color: #1a1a1a; }
+  .data-table thead th { color: #b8923f; border-bottom-color: #b8923f; }
+  .data-table tbody td { color: #333; border-bottom-color: #eee; }
+  .data-table td:first-child { color: #1a1a1a; }
+  .kpi-table thead th { color: #1a1a1a; }
+  .reveal { opacity: 1; transform: none; }
+  .summary-block::before { display: none; }
+  .campaign-card:hover, .learning-card:hover { transform: none; box-shadow: none; }
+  .prose, .bullet-list li, .campaign-detail dd, .timeline-tasks li { color: #333; }
+  .kill-rule { background: #fde; color: #c0392b; }
+  .kpi-table .bench { background: #dfd; color: #1a7a3a; }
+  .kpi-table .flag { background: #fde; color: #c0392b; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-brand">FiLLi Cafe</div>
+  <h1 class="hero-title">Meta Ads Operating Strategy<br><em>Brand Momentum Phase</em></h1>
+  <p class="hero-sub">Q2 2026 — Shifting from Spend to Sell → Spend to Build</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Phase Duration</div>
+      <div class="hero-meta-value">12 Weeks</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Monthly Budget</div>
+      <div class="hero-meta-value">AED 5,250</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Campaigns</div>
+      <div class="hero-meta-value">5</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Objective</div>
+      <div class="hero-meta-value">Brand + Data</div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 1: PAST LEARNINGS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">01</span>
+      <div class="section-label">Section One</div>
+      <h2 class="section-title">Past Campaign Learnings</h2>
+    </div>
+
+    <p class="prose reveal reveal-delay-1">Performance summary across <strong>10 campaigns</strong> running Mar 1–14, 2026. Total spend: <span class="text-gold">AED 2,103.81</span>.</p>
+
+    <table class="data-table reveal reveal-delay-2">
+      <thead>
+        <tr><th>Insight</th><th>Data</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Best CPC achieved</td><td class="val-green">AED 0.08 (Sales Video)</td></tr>
+        <tr><td>Worst CPC</td><td class="val-red">AED 5.15 (Every Day Open) — 64x worse</td></tr>
+        <tr><td>Best CTR</td><td class="val-green">14.41% (Sales Video — Reels format)</td></tr>
+        <tr><td>Worst CTR</td><td class="val-red">0.12% (Reach &amp; Awareness Static)</td></tr>
+        <tr><td>Audience Network trap</td><td class="val-red">AED 83.47 spent, 3,693 "clicks" — 96% were Audience Network</td></tr>
+        <tr><td>Real platform clicks</td><td>Only 146 genuine clicks on FB/IG (Sales Video)</td></tr>
+        <tr><td>Video vs Static</td><td>Video: <span class="val-green">14.41% CTR, AED 0.08 CPC</span> — Static: <span class="val-red">0.12% CTR, AED 5.15 CPC</span></td></tr>
+        <tr><td>Frequency signal</td><td>Every Day Open: 1.42 freq but 0.22% CTR = fatigue from day 1</td></tr>
+        <tr><td>Best reach efficiency</td><td class="val-green">Traffic: 62,766 reach for AED 97.76 (AED 1.56 CPM)</td></tr>
+        <tr><td>Worst reach efficiency</td><td class="val-red">Retargeting: 1,370 reach for AED 73.01 (AED 53.29 CPM)</td></tr>
+        <tr><td>Conversion tracking</td><td class="val-red">0 purchases tracked across ALL campaigns</td></tr>
+        <tr><td>Store radius</td><td>7km radius across 40 UAE stores = solid geo coverage</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading reveal">Key Learnings</h3>
+
+    <div class="learning-grid">
+      <div class="learning-card reveal" data-num="01">
+        <h4>Video Dominates</h4>
+        <p>120x better CTR than static. All future creative must be motion-first.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-1" data-num="02">
+        <h4>Audience Network is Poison</h4>
+        <p>Inflates metrics with fake engagement. MUST be excluded permanently.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-2" data-num="03">
+        <h4>Conversion Tracking is Broken</h4>
+        <p>Cofe Cloud doesn't fire Meta Pixel purchase events. Sales objective is blind.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-3" data-num="04">
+        <h4>Reels is the Format</h4>
+        <p>Facebook Reels + Instagram Reels = highest organic reach and engagement.</p>
+      </div>
+      <div class="learning-card reveal" data-num="05">
+        <h4>Static Ads are Dead Weight</h4>
+        <p>0.12% CTR at AED 5.15 CPC = burning money. Retire static-only campaigns.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-1" data-num="06">
+        <h4>Retargeting Pool Too Small</h4>
+        <p>Only 1,370 reach = audience exhausted in hours. Must grow to 100K+.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-2" data-num="07">
+        <h4>Broad Targeting Works</h4>
+        <p>UAE stores 7km radius with no interest targeting delivered best results.</p>
+      </div>
+      <div class="learning-card reveal reveal-delay-3" data-num="08">
+        <h4>CPM Sweet Spot</h4>
+        <p>AED 1.56–10.70 range. Below AED 5 = efficient brand building territory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 2: BRAND MOMENTUM PHASE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">02</span>
+      <div class="section-label">Section Two</div>
+      <h2 class="section-title">Brand Momentum Phase</h2>
+    </div>
+
+    <div class="phase-block reveal">
+      <h4>Why This Phase is Required</h4>
+      <p>FiLLi Cafe's online ordering infrastructure (Cofe Cloud) does not pass conversion data back to Meta. Running Sales/Conversion campaigns is like driving with no speedometer — spending money with zero ability to measure return.</p>
+    </div>
+
+    <p class="prose-callout reveal">Stop optimizing for conversions we can't track. Build the audience, brand recall, and data infrastructure that will make future Sales campaigns 3-5x more effective.</p>
+
+    <h3 class="sub-heading reveal">How It Protects Media ROI</h3>
+    <ul class="bullet-list reveal">
+      <li>Eliminates wasted spend on broken conversion optimization — was losing AED 2,100 in 14 days with <strong>0 tracked purchases</strong></li>
+      <li>Redirects budget to objectives Meta CAN optimize for — reach, video views, engagement are all trackable</li>
+      <li>Builds retargeting audiences from <span class="text-red">1,370</span> to <span class="text-green">100,000+</span> before re-enabling Sales</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">How It Prepares for Future Conversion Scaling</h3>
+    <ul class="bullet-list reveal">
+      <li>Large warm audiences = lower CPA when Sales campaigns return</li>
+      <li>Video viewer pools = highest-intent retargeting segments</li>
+      <li>Brand recall lift = more organic/direct orders via Cofe Cloud dashboard</li>
+      <li>App install base = direct push notification channel that bypasses Meta entirely</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">Success Metrics — 90 Day Targets</h3>
+    <table class="data-table reveal">
+      <thead>
+        <tr><th>Signal</th><th>Target</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Total Reach</td><td class="val-gold">500,000+ unique UAE users</td></tr>
+        <tr><td>Video Views (ThruPlay)</td><td class="val-gold">200,000+</td></tr>
+        <tr><td>Retargeting Pool Size</td><td class="val-gold">100,000+ engagers</td></tr>
+        <tr><td>App Installs</td><td class="val-gold">5,000+</td></tr>
+        <tr><td>Avg Frequency</td><td class="val-gold">Below 3.0</td></tr>
+        <tr><td>Brand Search Lift</td><td class="val-gold">+20% Google "FiLLi Cafe" searches</td></tr>
+        <tr><td>CPM Efficiency</td><td class="val-gold">Below AED 5.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 3: CAMPAIGN ARCHITECTURE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">03</span>
+      <div class="section-label">Section Three</div>
+      <h2 class="section-title">Campaign Architecture</h2>
+    </div>
+
+    <!-- Campaign 1 -->
+    <div class="campaign-card green reveal">
+      <div class="campaign-num">Campaign 01</div>
+      <h3>Brand Awareness / Reach</h3>
+      <dl class="campaign-detail">
+        <dt>Objective</dt><dd>Reach — maximize unique impressions</dd>
+        <dt>Audience</dt><dd>Broad — UAE, 7km radius around all stores, age 18-55, no interest targeting</dd>
+        <dt>Budget</dt><dd>25% of total — AED 43.75/day</dd>
+        <dt>Creative</dt><dd>15-second vertical video — FiLLi store ambiance, Zafran Chai preparation, Dubai lifestyle</dd>
+        <dt>Placements</dt><dd>Facebook Feed, Facebook Reels, Instagram Feed, Instagram Reels ONLY</dd>
+        <dt>Signal</dt><dd>150,000+ monthly reach, CPM below AED 3.00, frequency below 2.0</dd>
+      </dl>
+      <div class="kill-rule">Pause if CPM exceeds AED 8.00 or frequency exceeds 3.0 in any week</div>
+    </div>
+
+    <!-- Campaign 2 -->
+    <div class="campaign-card blue reveal">
+      <div class="campaign-num">Campaign 02</div>
+      <h3>Video View Storytelling</h3>
+      <dl class="campaign-detail">
+        <dt>Objective</dt><dd>ThruPlay — 15-second video views</dd>
+        <dt>Audience</dt><dd>Broad UAE + Lookalike of existing page engagers (1%)</dd>
+        <dt>Budget</dt><dd>30% of total — AED 52.50/day — largest allocation, this is the engine</dd>
+        <dt>Creative</dt><dd>15-30s Reels — "The Zafran Story", "From Farm to Cup", "FiLLi People", "Dubai Morning Ritual"</dd>
+        <dt>Placements</dt><dd>Facebook Reels, Instagram Reels (Reels-only — peak video performance)</dd>
+        <dt>Signal</dt><dd>100,000+ ThruPlay/month, cost per ThruPlay below AED 0.02, 75%+ completion</dd>
+      </dl>
+      <div class="kill-rule">Pause creative if ThruPlay rate drops below 50% or cost exceeds AED 0.05</div>
+    </div>
+
+    <!-- Campaign 3 -->
+    <div class="campaign-card purple reveal">
+      <div class="campaign-num">Campaign 03</div>
+      <h3>App Install</h3>
+      <dl class="campaign-detail">
+        <dt>Objective</dt><dd>App Installs — optimize for installs</dd>
+        <dt>Audience</dt><dd>Broad UAE, 7km radius, age 21-45, mobile only</dd>
+        <dt>Budget</dt><dd>20% of total — AED 35.00/day</dd>
+        <dt>Creative</dt><dd>"Order in 30 seconds" demo video, app UI showcase, exclusive app offers</dd>
+        <dt>Placements</dt><dd>Instagram Feed, Instagram Reels, Facebook Feed (mobile only)</dd>
+        <dt>Signal</dt><dd>50-100 installs/day, CPI below AED 3.50</dd>
+      </dl>
+      <div class="kill-rule">Pause if CPI exceeds AED 7.00 for 3 consecutive days</div>
+    </div>
+
+    <!-- Campaign 4 -->
+    <div class="campaign-card orange reveal">
+      <div class="campaign-num">Campaign 04</div>
+      <h3>Engagement &amp; Community Growth</h3>
+      <dl class="campaign-detail">
+        <dt>Objective</dt><dd>Engagement — post engagement + page likes</dd>
+        <dt>Audience</dt><dd>UAE broad + interest: tea, coffee culture, Dubai food, cafe lifestyle</dd>
+        <dt>Budget</dt><dd>15% of total — AED 26.25/day</dd>
+        <dt>Creative</dt><dd>Interactive — polls ("Zafran or Karak?"), UGC reposts, behind-the-scenes, staff stories</dd>
+        <dt>Placements</dt><dd>Facebook Feed, Instagram Feed, Instagram Reels</dd>
+        <dt>Signal</dt><dd>5,000+ engagements/week, cost per engagement below AED 0.10</dd>
+      </dl>
+      <div class="kill-rule">Pause if cost per engagement exceeds AED 0.25</div>
+    </div>
+
+    <!-- Campaign 5 -->
+    <div class="campaign-card red-accent reveal">
+      <div class="campaign-num">Campaign 05</div>
+      <h3>Retargeting Pool Builder</h3>
+      <dl class="campaign-detail">
+        <dt>Objective</dt><dd>Reach — against warm audiences only</dd>
+        <dt>Audience</dt><dd>Video viewers 75%+, IG engagers 90d, FB engagers 90d, website visitors 180d, app users</dd>
+        <dt>Budget</dt><dd>10% of total — AED 17.50/day</dd>
+        <dt>Creative</dt><dd>Deeper brand — menu highlights, store locator prompts, "Your nearest FiLLi"</dd>
+        <dt>Placements</dt><dd>All Meta placements EXCEPT Audience Network</dd>
+        <dt>Signal</dt><dd>Warm audiences active at 2-4x frequency/month, pool growth to 100K+</dd>
+      </dl>
+      <div class="kill-rule">Pause if frequency exceeds 5.0 or CPM exceeds AED 15.00</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 4: KPI FRAMEWORK -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">04</span>
+      <div class="section-label">Section Four</div>
+      <h2 class="section-title">KPI Framework</h2>
+    </div>
+
+    <h3 class="sub-heading reveal">Primary KPIs — Weekly Monitoring</h3>
+
+    <table class="kpi-table reveal">
+      <thead>
+        <tr><th>KPI</th><th>Benchmark</th><th>Red Flag</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CPM</td><td><span class="bench">Below AED 5.00</span></td><td><span class="flag">Above AED 10.00</span></td></tr>
+        <tr><td>ThruPlay Rate</td><td><span class="bench">Above 75%</span></td><td><span class="flag">Below 50%</span></td></tr>
+        <tr><td>Cost per ThruPlay</td><td><span class="bench">Below AED 0.02</span></td><td><span class="flag">Above AED 0.05</span></td></tr>
+        <tr><td>Cost per Engagement</td><td><span class="bench">Below AED 0.10</span></td><td><span class="flag">Above AED 0.25</span></td></tr>
+        <tr><td>Cost per App Install</td><td><span class="bench">Below AED 3.50</span></td><td><span class="flag">Above AED 7.00</span></td></tr>
+        <tr><td>Frequency</td><td><span class="bench">1.5 – 3.0</span></td><td><span class="flag">Above 4.0</span></td></tr>
+        <tr><td>Audience Growth</td><td><span class="bench">+5,000/week</span></td><td><span class="flag">Flat or declining</span></td></tr>
+        <tr><td>Retargeting Pool</td><td><span class="bench">Growing 10%/week</span></td><td><span class="flag">Stagnant</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading reveal">Secondary Signals — Monthly</h3>
+    <ul class="bullet-list reveal">
+      <li>Google Search volume for "FiLLi Cafe" (Search Console)</li>
+      <li>Direct website traffic (GA4)</li>
+      <li>App store page views &amp; install rate</li>
+      <li>Cofe Cloud order volume (correlation, not attribution)</li>
+      <li>Instagram follower growth rate</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">Weekly Reporting Cadence</h3>
+    <p class="prose reveal">Every Monday: Pull all campaign metrics → generate report via <strong>report.py</strong> → auto-publish to GitHub Pages → Notion entry created → share link with team.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 5: CREATIVE STRATEGY -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">05</span>
+      <div class="section-label">Section Five</div>
+      <h2 class="section-title">Creative System Strategy</h2>
+    </div>
+
+    <h3 class="sub-heading reveal">Messaging Pillars</h3>
+    <div class="pillar-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-num">1</div>
+        <h4>Heritage &amp; Craft</h4>
+        <p>"Since 1991. Every cup tells a story." Zafran sourcing, traditional preparation.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-1">
+        <div class="pillar-num">2</div>
+        <h4>Dubai Identity</h4>
+        <p>"Dubai's favorite chai." Position FiLLi as a Dubai essential, not just a cafe.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-2">
+        <div class="pillar-num">3</div>
+        <h4>Ritual &amp; Routine</h4>
+        <p>"Start your day with FiLLi." Embed into daily habits and morning rituals.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-3">
+        <div class="pillar-num">4</div>
+        <h4>Community &amp; People</h4>
+        <p>Staff stories, customer moments, cultural celebrations, shared experiences.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-4">
+        <div class="pillar-num">5</div>
+        <h4>Product Showcase</h4>
+        <p>Zafran Chai, Karak, tea powder range — pure appetite appeal.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading reveal">Creative Mix</h3>
+    <table class="data-table reveal">
+      <thead>
+        <tr><th>Type</th><th>Ratio</th><th>Format</th><th>Refresh</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Video (15s Reels)</td><td class="val-gold">60%</td><td>Vertical 9:16</td><td>Every 2 weeks</td></tr>
+        <tr><td>Video (30s Story)</td><td class="val-gold">20%</td><td>Vertical 9:16</td><td>Every 3 weeks</td></tr>
+        <tr><td>Carousel</td><td>10%</td><td>Square 1:1</td><td>Monthly</td></tr>
+        <tr><td>Static</td><td>10%</td><td>Square/Vertical</td><td>Monthly</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading reveal">Fatigue Prevention Framework</h3>
+    <ul class="bullet-list reveal">
+      <li><strong>Rule:</strong> No single creative runs more than 14 days without refresh</li>
+      <li><strong>Signal:</strong> If CTR drops 30% from launch baseline → swap creative</li>
+      <li><strong>Signal:</strong> If frequency exceeds 3.0 → rotate audience OR creative</li>
+      <li><strong>Buffer:</strong> Always have 2 creatives in reserve per campaign (pre-approved)</li>
+      <li><strong>Testing:</strong> Every new creative gets 3-day test at AED 10/day before scaling</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">Cultural Calendar</h3>
+    <p class="prose reveal">Ramadan → Eid → Dubai Food Festival → Summer (indoor positioning) → Back to School → UAE National Day (Dec 2) → Friday brunch culture year-round.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 6: MEDIA BUYING LOGIC -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">06</span>
+      <div class="section-label">Section Six</div>
+      <h2 class="section-title">Media Buying Operating Logic</h2>
+    </div>
+
+    <h3 class="sub-heading reveal">Budget Distribution — AED 175/day = AED 5,250/month</h3>
+
+    <div class="budget-bar-container reveal">
+      <div class="budget-row">
+        <div class="budget-label">Video Storytelling</div>
+        <div class="budget-bar-track"><div class="budget-bar-fill blue-fill" data-width="100%">AED 52.50/day</div></div>
+        <div class="budget-pct">30%</div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-label">Brand Awareness</div>
+        <div class="budget-bar-track"><div class="budget-bar-fill green-fill" data-width="83%">AED 43.75/day</div></div>
+        <div class="budget-pct">25%</div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-label">App Install</div>
+        <div class="budget-bar-track"><div class="budget-bar-fill purple-fill" data-width="67%">AED 35.00/day</div></div>
+        <div class="budget-pct">20%</div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-label">Engagement</div>
+        <div class="budget-bar-track"><div class="budget-bar-fill orange-fill" data-width="50%">AED 26.25/day</div></div>
+        <div class="budget-pct">15%</div>
+      </div>
+      <div class="budget-row">
+        <div class="budget-label">Retargeting Pool</div>
+        <div class="budget-bar-track"><div class="budget-bar-fill red-fill" data-width="33%">AED 17.50/day</div></div>
+        <div class="budget-pct">10%</div>
+      </div>
+    </div>
+
+    <h3 class="sub-heading reveal">Targeting Logic</h3>
+    <ul class="bullet-list reveal">
+      <li><strong>Broad first</strong> — Let Meta's algorithm find the best audience within the geo radius. Data shows broad outperformed interest targeting.</li>
+      <li><strong>Geo clusters</strong> — 7km radius around all 40 UAE stores. Covers major population centers without overlap.</li>
+      <li><strong>No Advantage+ Audience</strong> — Always set <code>advantage_audience: 0</code>. We control targeting.</li>
+      <li><strong>No Audience Network</strong> — Always exclude. Publisher platforms: Facebook + Instagram only.</li>
+      <li><strong>Age bands</strong> — 18-55 for awareness, 21-45 for app installs (purchasing demographic).</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">Scaling Triggers</h3>
+    <ul class="bullet-list reveal">
+      <li>Campaign hits benchmark KPIs for <strong>7 consecutive days</strong> → increase budget 20%</li>
+      <li>CPM drops below <strong>AED 2.00</strong> → opportunity to scale aggressively (cheap reach)</li>
+      <li>ThruPlay cost drops below <strong>AED 0.01</strong> → double video budget</li>
+      <li>Never increase budget more than <strong>30% in a single day</strong> (avoids learning phase reset)</li>
+    </ul>
+
+    <h3 class="sub-heading reveal">Placement Control</h3>
+    <ul class="bullet-list reveal">
+      <li><strong>Phase 1 (Week 1-2):</strong> Manual — FB Feed, FB Reels, IG Feed, IG Reels only</li>
+      <li><strong>Phase 2 (Week 3-4):</strong> Add IG Stories, FB Stories if Phase 1 delivers</li>
+      <li><strong>Phase 3 (Month 2+):</strong> Test Advantage+ placements EXCLUDING Audience Network</li>
+      <li><span class="text-red"><strong>NEVER enable Audience Network</strong></span></li>
+    </ul>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 7: DATA BUILDING -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">07</span>
+      <div class="section-label">Section Seven</div>
+      <h2 class="section-title">Data Building Strategy</h2>
+    </div>
+
+    <h3 class="sub-heading reveal">Audience Pools to Build</h3>
+    <table class="audience-table reveal">
+      <thead>
+        <tr><th>Audience</th><th>Source</th><th>Target Size</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Video Viewers (75%+)</td><td>ThruPlay campaigns</td><td>50,000+</td><td>Highest-intent retargeting seed</td></tr>
+        <tr><td>Video Viewers (50%+)</td><td>All video campaigns</td><td>100,000+</td><td>Broad warm audience</td></tr>
+        <tr><td>IG Engagers (90d)</td><td>Organic + paid</td><td>30,000+</td><td>Social proof audience</td></tr>
+        <tr><td>FB Page Engagers (90d)</td><td>Organic + paid</td><td>20,000+</td><td>Cross-platform warm</td></tr>
+        <tr><td>Website Visitors (180d)</td><td>Pixel</td><td>10,000+</td><td>Intent signal</td></tr>
+        <tr><td>App Installers</td><td>App events</td><td>5,000+</td><td>Direct push channel</td></tr>
+        <tr><td>Lookalike 1% — Video 75%</td><td>Seed: 75% viewers</td><td>Auto</td><td>Best prospecting audience</td></tr>
+        <tr><td>Lookalike 1% — App Users</td><td>Seed: app installers</td><td>Auto</td><td>Purchase-intent lookalike</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading reveal">Segmentation Layers</h3>
+    <div class="segment-layers reveal">
+      <div class="segment cold">
+        <h5>Cold</h5>
+        <p>Never interacted with FiLLi. Broad targeting.</p>
+      </div>
+      <div class="segment warm">
+        <h5>Warm</h5>
+        <p>Watched 50%+ video OR engaged with posts.</p>
+      </div>
+      <div class="segment hot">
+        <h5>Hot</h5>
+        <p>Watched 75%+ video OR visited site OR installed app.</p>
+      </div>
+      <div class="segment customer">
+        <h5>Customer</h5>
+        <p>App users who ordered via Cofe Cloud.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-heading reveal">Preparing for the Sales Comeback</h3>
+    <div class="phase-block reveal">
+      <h4>When Conversion Tracking is Fixed</h4>
+      <ul>
+        <li>Hot audience → Sales campaign with Purchase objective</li>
+        <li>Lookalike of app purchasers → Prospecting Sales campaign</li>
+        <li>Expected CPA improvement: 40-60% lower than cold audience</li>
+        <li>Expected ROAS: 3-5x (vs current 0x with broken tracking)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 8: EXECUTION ROADMAP -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-number">08</span>
+      <div class="section-label">Section Eight</div>
+      <h2 class="section-title">Execution Roadmap</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-block reveal">
+        <div class="timeline-week">Week 1–2</div>
+        <div class="timeline-title">Foundation</div>
+        <ul class="timeline-tasks">
+          <li>Create all 5 campaigns in Meta Ads Manager (PAUSED)</li>
+          <li>Exclude Audience Network across all campaigns</li>
+          <li>Set up custom audiences (video viewers, IG engagers, FB engagers, website visitors)</li>
+          <li>Produce first batch of creative (3 videos per campaign)</li>
+          <li>Configure automated reporting pipeline</li>
+          <li>Launch Campaign 1 (Brand Awareness) and Campaign 2 (Video Storytelling)</li>
+          <li>Daily monitoring for first 3 days</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block reveal">
+        <div class="timeline-week">Week 3–4</div>
+        <div class="timeline-title">Expansion</div>
+        <ul class="timeline-tasks">
+          <li>Review Week 1-2 data → kill underperforming creatives</li>
+          <li>Launch Campaign 4 (Engagement) and Campaign 5 (Retargeting Pool)</li>
+          <li>First creative refresh for Campaigns 1 &amp; 2</li>
+          <li>Begin building Lookalike audiences from early video viewer data</li>
+          <li>Generate first weekly report and share with team</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block reveal">
+        <div class="timeline-week">Week 5–6</div>
+        <div class="timeline-title">App Push</div>
+        <ul class="timeline-tasks">
+          <li>Launch Campaign 3 (App Install)</li>
+          <li>A/B test app install creatives (demo vs offer vs lifestyle)</li>
+          <li>Scale winning campaigns by 20% if benchmarks met</li>
+          <li>Second creative refresh cycle</li>
+          <li>Review audience pool sizes — on track for 100K?</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block reveal">
+        <div class="timeline-week">Week 7–8</div>
+        <div class="timeline-title">Optimization</div>
+        <ul class="timeline-tasks">
+          <li>Full KPI review across all 5 campaigns</li>
+          <li>Kill any campaign consistently below benchmarks</li>
+          <li>Reallocate budget from underperformers to winners</li>
+          <li>Create Lookalike audiences from best-performing seed pools</li>
+          <li>Third creative refresh cycle</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block reveal">
+        <div class="timeline-week">Week 9–12</div>
+        <div class="timeline-title">Scale &amp; Prepare</div>
+        <ul class="timeline-tasks">
+          <li>Scale all winning campaigns to maximum efficient budget</li>
+          <li>Begin planning Sales Comeback Phase (requires Cofe Cloud pixel fix)</li>
+          <li>Document all audience learnings</li>
+          <li>Build Sales campaign drafts using warm audience segments</li>
+          <li>Final Brand Momentum Phase report</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-heading reveal">Operating Rules</h3>
+    <div class="rules-grid reveal">
+      <div class="rules-block kill">
+        <h4>Creative Kill Rules</h4>
+        <ul>
+          <li>CTR drops 30% from launch week baseline</li>
+          <li>Frequency exceeds 3.5</li>
+          <li>CPC doubles from benchmark</li>
+          <li>No engagement in 48 hours</li>
+        </ul>
+      </div>
+      <div class="rules-block scale">
+        <h4>Scaling Signals</h4>
+        <ul>
+          <li>7 consecutive days at benchmark KPIs → scale 20%</li>
+          <li>CPM below AED 2.00 → aggressive scale</li>
+          <li>ThruPlay rate above 85% → increase budget</li>
+          <li>App install cost below AED 2.00 → double budget</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- STRATEGIC SUMMARY -->
+<section class="section">
+  <div class="container">
+    <div class="summary-block reveal">
+      <p class="summary-quote">FiLLi Cafe is shifting from <em>"Spend to Sell"</em><br>to <em>"Spend to Build."</em></p>
+
+      <p class="prose" style="max-width:640px; margin: 0 auto 2rem; text-align:center;">Every dirham in the Brand Momentum Phase serves a dual purpose: immediate brand impact and future conversion infrastructure.</p>
+
+      <div class="summary-stats">
+        <div class="summary-stat">
+          <div class="summary-stat-value">100K+</div>
+          <div class="summary-stat-label">Warm Audience</div>
+        </div>
+        <div class="summary-stat">
+          <div class="summary-stat-value">50K+</div>
+          <div class="summary-stat-label">Video Viewers</div>
+        </div>
+        <div class="summary-stat">
+          <div class="summary-stat-value">5K+</div>
+          <div class="summary-stat-label">App Users</div>
+        </div>
+        <div class="summary-stat">
+          <div class="summary-stat-value">3-5x</div>
+          <div class="summary-stat-label">Expected ROAS</div>
+        </div>
+      </div>
+
+      <p class="prose-callout" style="text-align: center; border: none; padding: 0; margin-top: 2rem;">The Sales Comeback will be a precision strike, not a blind bet.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="doc-footer">
+  <p>Strategy designed for FiLLi Cafe — Performance Marketing Team</p>
+  <p>Generated March 14, 2026 &nbsp;·&nbsp; Confidential</p>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// Back to top button
+const btn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  btn.classList.toggle('visible', window.scrollY > 600);
+});
+
+// Budget bar animation
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fills = entry.target.querySelectorAll('.budget-bar-fill');
+      fills.forEach(fill => {
+        fill.style.width = fill.dataset.width;
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const barContainer = document.querySelector('.budget-bar-container');
+if (barContainer) barObserver.observe(barContainer);
+</script>
+</body>
+</html>
